@@ -14,13 +14,13 @@ UFW='false'
 while getopts f:e:i:p:r:lu flag
 do
     case "${flag}" in
-        f) FQDN=${OPTARG};;
-        e) EMAIL=${OPTARG};;
-        i) IP=${OPTARG};;
-        p) PASSWORD=${OPTARG};;
-		r) SQLROOT=${OPTARG};;
-        l) LETSENCRYPT='true';;
-		u) UFW='true';;
+      f) FQDN=${OPTARG};;
+      e) EMAIL=${OPTARG};;
+      i) IP=${OPTARG};;
+      p) PASSWORD=${OPTARG};;
+      r) SQLROOT=${OPTARG};;
+      l) LETSENCRYPT='true';;
+      u) UFW='true';;
     esac
 done
 
@@ -337,6 +337,7 @@ echo "--------------------------------------------------------------------------
 echo " Mysql database        : giteadb "
 echo " Mysql user            : gitea "
 echo " Mysql password        : $PASSWORD "
+echo " Mysql character set   : utf8mb4"
 echo "--------------------------------------------------------------------------------------"
 echo " Mysql root user       : root"
 echo " Mysql root password   : $SQLROOT"
