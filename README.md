@@ -29,7 +29,7 @@ Available flags:
 wget https://github.com/lanbugs/gitea_installer/raw/main/gitea_installer.sh
 chmod +x gitea_installer.sh
 
-./gitea_installer.sh -f git.example.com -e admin@example.com -i 10.10.10.10 -p securepassword -r sqlrootpw -l -u
+sudo ./gitea_installer.sh -f git.example.com -e admin@example.com -i 10.10.10.10 -p securepassword -r sqlrootpw -l -u
 ```
 
 Finished screen:

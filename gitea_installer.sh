@@ -67,24 +67,20 @@ VER=$(curl --silent "https://api.github.com/repos/go-gitea/gitea/releases/latest
 adduser --system --group --disabled-password --shell /bin/bash --home /home/git --gecos 'Git Version Control' git
 
 # Download gitea
-# Check if architecure is i386 and download Gitea
 if [ -n "$(uname -a | grep i386)" ]; then
-    sudo curl -fsSL -o "/tmp/gitea" "https://dl.gitea.io/gitea/$VER/gitea-$VER-linux-386"
+    curl -fsSL -o "/tmp/gitea" "https://dl.gitea.io/gitea/$VER/gitea-$VER-linux-386"
 fi
 
-# Check if architecure is x86 and download Gitea
 if [ -n "$(uname -a | grep x86_64)" ]; then
-  sudo curl -fsSL -o "/tmp/gitea" "https://dl.gitea.io/gitea/$VER/gitea-$VER-linux-amd64"
+  curl -fsSL -o "/tmp/gitea" "https://dl.gitea.io/gitea/$VER/gitea-$VER-linux-amd64"
 fi
 
-# Check if architecure is ARMv6 and download Gitea
 if [ -n "$(uname -a | grep armv6l)" ]; then
-  sudo curl -fsSL -o "/tmp/gitea" "https://dl.gitea.io/gitea/$VER/gitea-$VER-linux-arm-6"
+  curl -fsSL -o "/tmp/gitea" "https://dl.gitea.io/gitea/$VER/gitea-$VER-linux-arm-6"
 fi
 
-# Check if architecure is ARMv7 and download Gitea
 if [ -n "$(uname -a | grep armv7l)" ]; then
-  sudo curl -fsSL -o "/tmp/gitea" "https://dl.gitea.io/gitea/$VER/gitea-$VER-linux-arm-7"
+  curl -fsSL -o "/tmp/gitea" "https://dl.gitea.io/gitea/$VER/gitea-$VER-linux-arm-7"
 fi
 
 # Move binary
