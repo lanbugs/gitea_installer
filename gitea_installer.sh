@@ -302,6 +302,7 @@ server {
     location / {
        proxy_redirect off;
        proxy_pass http://127.0.0.1:3000;
+       client_max_body_size 0;
     }
 }
 XYZ
